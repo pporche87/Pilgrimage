@@ -2,14 +2,21 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 
-app.get('/', (request, response) => {
-	console.log('I am the splash page')
+app.get('/', (request,response) => {
+	response.redirect('/login')
+})
+
+app.get('/login', (request, response) => {
 	response.render('login')
+})
+
+app.get('/signup', (request,response) => {
+	response.render('signup')
 })
 
 app.use((request, response) => {
