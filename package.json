@@ -1,0 +1,35 @@
+{
+  "name": "pilgrimage",
+  "version": "1.0.0",
+  "description": "Pilgrimage Travel Community Full-Stack JavaScript Application. Built in Nodejs, Express, and Ejs Templating. Tested with Mocha, Chai, and Selenium.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+		"start:dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pporche87/Pilgrimage.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "JavaScript"
+  ],
+  "author": "Patrick Porche <pporche87@gmail.com> (http://pporche87.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pporche87/Pilgrimage/issues"
+  },
+  "homepage": "https://github.com/pporche87/Pilgrimage#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-plugin-react": "^7.3.0"
+  }
+}
