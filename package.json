@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/pporche87/Pilgrimage#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "pg-promise": "^6.5.1"
@@ -33,7 +35,8 @@
   "devDependencies": {
     "dotenv": "^4.0.0",
     "eslint": "^4.5.0",
-		"nodemon": "^1.11.0",
-    "eslint-plugin-react": "^7.3.0"
+    "eslint-plugin-react": "^7.3.0",
+    "node-pg-migrate": "^2.7.0",
+    "nodemon": "^1.11.0"
   }
 }

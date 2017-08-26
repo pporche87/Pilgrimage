@@ -3,11 +3,19 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const routes = require('./server/routes')
+const bodyParser = require('body-parser')
 
 app.use(express.static(path.join(__dirname, '../public')))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
+
+app.use((request, response, next) => {
+	response.locals.message = ''
+	next()
+})
 
 app.use('/', routes)
 
