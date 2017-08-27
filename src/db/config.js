@@ -3,5 +3,7 @@ module.exports = (env) => {
     return process.env.DB_DEV_URL
   } else if (env === 'test') {
     return process.env.DB_TEST_URL
+  } else if (env === 'production') {
+    return process.env.DB_PRODUCTION_URL
   }
 }

@@ -4,7 +4,7 @@
   "description": "Pilgrimage Travel Community Full-Stack JavaScript Application. Built in Nodejs, Express, and Ejs Templating. Tested with Mocha, Chai, and Selenium.",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=development node src/server.js",
+    "start": "NODE_ENV=production node src/server.js",
     "start:dev": "NODE_ENV=development nodemon src/server.js",
     "db:reset": "dropdb pilgrimage && createdb pilgrimage && npm run load_schema",
 		"test_queries": "psql -d pilgrimage < src/db/test_queries.sql",
