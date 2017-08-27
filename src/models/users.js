@@ -16,8 +16,8 @@ const getUserById = (id) => {
   return DbUsers.getUserById(id)
 }
 
-const updateUserProfileById = (id, username, current_city, img_url) => {
-  return DbUsers.updateUserProfileById(id, username, current_city, img_url)
+const updateUserProfileById = (id, username, current_city) => {
+  return DbUsers.updateUserProfileById(id, username, current_city)
 }
 
 const updateUserImageById = (id, imgurl) => {

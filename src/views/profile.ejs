@@ -4,7 +4,7 @@
 		<div class="col-sm-6 col-md-4">
 			<div class="thumbnail">
 				<img src="<%= user.img_url %>" alt="Profile Picture">
-				<form class="" action="/update/image/<%= user.id %>" method="post">
+				<form class="" action="/users/update/image/<%= user.id %>" method="post">
 					<div class="form-group">
 						<input type="hidden" role="uploadcare-uploader" name="imgurl" data-public-key="3ab2a21e3dd8a6a0f126" data-images-only />
 						<input type="submit" value="Save">
@@ -14,14 +14,14 @@
 					<h3><%= user.username %></h3>
 					<p><%= moment(user.date_joined).format('MMMM Do YYYY') %></p>
 					<p><%= user.current_city %></p>
-					<p><a href="/update/<%= user.id %>" class="btn btn-primary" role="button">Edit Profile</a>
+					<p><a href="/users/update/<%= user.id %>" class="btn btn-primary" role="button">Edit Profile</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-8">
 				<ul>
 					<% posts.forEach(function(post) { %>
-						<li><h1><a href="/post/<%= post.id %>"><%= post.title %></a></h1></li>
+						<li><h1><a href="/posts/post/<%= post.id %>"><%= post.title %></a></h1></li>
 					<% }) %>
 				</ul>
 			</div>

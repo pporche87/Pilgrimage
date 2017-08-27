@@ -92,9 +92,9 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 
 - [x] See a "default" profile photo on their profile page before adding their own photo.
 - [x] Update their profile photo (consider using Uploadcare).
-- [ ] See their profile photo next to their posts.
-- [ ] Receive a welcome email after creating an account.
-- [ ] Refactor code
+- [x] See their profile photo next to their posts.
+- [x] Receive a welcome email after creating an account.
+- [x] Refactor code
 - [ ] Update heroku.
 
 #### Sprint 2: Travel Tip CRUD
