@@ -19,11 +19,16 @@ const getUserById = (id) => {
     .catch(error => error)
 }
 
-
+const updateUserProfileById = (id, username, current_city) => {
+  return db.query('UPDATE users SET username=$2, current_city=$3 WHERE id=$1',
+    [id, username, current_city])
+    .catch(error => error)
+}
 
 
 module.exports = {
   createUser,
   checkUserByEmail,
-  getUserById
+  getUserById,
+  updateUserProfileById
 }

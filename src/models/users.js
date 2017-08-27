@@ -16,7 +16,13 @@ const getUserById = (id) => {
   return DbUsers.getUserById(id)
 }
 
+const updateUserProfileById = (id, username, current_city) => {
+  console.log(username, current_city);
+  return DbUsers.updateUserProfileById(id, username, current_city)
+}
+
 module.exports = {
   createUser,
-  getUserById
+  getUserById,
+  updateUserProfileById
 }

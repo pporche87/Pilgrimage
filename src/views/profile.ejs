@@ -1,10 +1,21 @@
 <%- include partials/header %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img src="<%= user.img_url %>" alt="Profile Picture">
+				<div class="caption">
+					<h3><%= user.username %></h3>
+					<p><%= moment(user.date_joined).format('MMMM Do YYYY') %></p>
+					<p><%= user.current_city %></p>
+					<p><a href="/update/<%= user.id %>" class="btn btn-primary" role="button">Edit Profile</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-8">
+				<h1>Hello World</h1>
+			</div>
+		</div>
 
-<h1>This is the profile page</h1>
-
-<h3><%= user.username %></h3>
-<h3><%= user.date_joined %></h3>
-<h3><%= user.current_city %></h3>
-
-
+</div>
 <%- include partials/footer %>

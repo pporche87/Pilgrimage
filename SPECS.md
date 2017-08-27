@@ -80,7 +80,7 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [x] See the site-wide header on every page.
 - [x] See a link to "Log Out" if they're logged in in the site-wide header.
 - [x] See links to "Log In" and "Sign Up" if they're logged out in the site-wide header.
-- [ ] Update their profile by making changes to their name and/or current city.
+- [x] Update their profile by making changes to their name and/or current city.
 - [ ] See the titles of all the posts they've contributed (start with pre-seeded data).
 - [ ] Click on the title of one of their posts and be redirected to a "show" page for that post.
 - [ ] View post "show" pages with title, author, and content.
@@ -90,7 +90,7 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 
 **A user should be able to:**
 
-- [ ] See a "default" profile photo on their profile page before adding their own photo.
+- [x] See a "default" profile photo on their profile page before adding their own photo.
 - [ ] Update their profile photo (consider using Uploadcare).
 - [ ] See their profile photo next to their posts.
 - [ ] Receive a welcome email after creating an account.
