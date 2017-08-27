@@ -6,7 +6,6 @@ const routes = require('./server/routes')
 const bodyParser = require('body-parser')
 const passport = require('./config/authentication')
 const session = require('express-session')
-// const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 
 app.use(express.static(path.join(__dirname, '../public')))
@@ -42,8 +41,6 @@ app.use((request, response) => {
 const port = process.env.NODE_ENV === 'development' ?
 	process.env.DEV_PORT :
 	process.env.TEST_PORT
-
-// const port = 8080
 
 app.listen(port, () => {
 	console.log(`http://localhost:${port}`);

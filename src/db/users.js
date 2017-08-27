@@ -19,9 +19,10 @@ const getUserById = (id) => {
     .catch(error => error)
 }
 
-const updateUserProfileById = (id, username, current_city, img_url) => {
-  return db.query('UPDATE users SET username=$2, current_city=$3 img_url=$4 WHERE id=$1',
-    [id, username, current_city, img_url])
+const updateUserProfileById = (id, username, current_city) => {
+	console.log(username, current_city);
+  return db.query('UPDATE users SET username=$2, current_city=$3 WHERE id=$1',
+    [id, username, current_city])
     .catch(error => error)
 }
 
