@@ -18,7 +18,7 @@ app.set('views', __dirname + '/views')
 
 app.use((request, response, next) => {
 	response.locals.message = ''
-	response.locals.success = null
+	response.locals.isLoggedIn = false
 	next()
 })
 
