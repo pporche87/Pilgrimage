@@ -11,8 +11,7 @@ router.route('/login')
     passport.authenticate('local', function (error, user) {
       if (error) { return next(error) }
       if (!user) { return response.render('login', {
-        message: 'Email or password does not exist.',
-        success: false
+        message: 'Email or password does not exist.'
       }) }
       request.logIn(user, function(error) {
         if (error) { return next(error) }
@@ -52,16 +51,10 @@ router.route('/signup')
     }
   })
 
-router.get('/profile', (request, response) => {
-  if (request.session.passport.user) {
-    const userId = request.session.passport.user
-    return DbUsers.getUserById(userId).then(user => {
-      user = user[0]
-      response.render('profile', { user: user })
-    })
-  } else {
+router.get('/logout', (request, response) => {
+  request.session.destroy(() => {
     response.redirect('/login')
-  }
+  })
 })
 
 module.exports = router

@@ -32,7 +32,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((id, done) => {
   DbUsers.getUserById(id)
     .then(user => {
-      done(null, user)
+      done(null, user[0])
     })
 })
 
