@@ -38,7 +38,7 @@ const getPostById = (id) => {
 }
 
 const getUserByPostId = (id) => {
-  return db.query('SELECT username FROM users WHERE id = (SELECT user_id FROM posts WHERE id=$1)',
+  return db.query('SELECT * FROM users WHERE id = (SELECT user_id FROM posts WHERE id=$1)',
     [id])
     .catch(error => error)
 }

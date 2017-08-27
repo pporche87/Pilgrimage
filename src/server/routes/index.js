@@ -45,13 +45,13 @@ router.post('/update/:userId', (request, response) => {
 
 router.get('/post/:postId', (request, response) => {
   const postId = request.params.postId
-  return DbUsers.getPostById(postId).then((post) => {
+  DbUsers.getPostById(postId).then((post) => {
     post = post[0]
-    return DbUsers.getUserByPostId(postId).then((user) => {
+    DbUsers.getUserByPostId(postId).then((user) => {
       user = user[0]
       response.render('show', {
-        post: post,
-        user: user
+        user: user,
+        post: post
       })
     })
   })

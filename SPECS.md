@@ -83,8 +83,8 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [x] Update their profile by making changes to their name and/or current city.
 - [x] See the titles of all the posts they've contributed (start with pre-seeded data).
 - [x] Click on the title of one of their posts and be redirected to a "show" page for that post.
-- [ ] View post "show" pages with title, author, and content.
-- [ ] Refactor sprint 1 and deploy to heroku.
+- [x] View post "show" pages with title, author, and content.
+- [ ] Deploy to heroku.
 
 ##### Stretch
 
@@ -94,12 +94,14 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [ ] Update their profile photo (consider using Uploadcare).
 - [ ] See their profile photo next to their posts.
 - [ ] Receive a welcome email after creating an account.
+- [ ] Refactor code
+- [ ] Update heroku.
 
 #### Sprint 2: Travel Tip CRUD
 
 **A user should be able to:**
 
-- [ ] Put at least 2 cities data in your database (make sure to include Oakland!)
+- [ ] Put at least 2 cities data in your database.
 - [ ] View the "Machu Picchu" site page (at "/cities/1").
 - [ ] See the site-wide header on the site page.
 - [ ] See the name of the site on the site page.
