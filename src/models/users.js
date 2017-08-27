@@ -4,7 +4,7 @@ const {makeHashedPassword} = require('../utils/password')
 const createUser = (name, email, password) => {
   return makeHashedPassword(password).then(hash => {
     const credentials = {
-      'name': name,
+      'username': name,
       'email': email,
       'password': hash
     }
@@ -12,4 +12,11 @@ const createUser = (name, email, password) => {
   })
 }
 
-module.exports = {createUser}
+const getUserById = (id) => {
+  return DbUsers.getUserById(id)
+}
+
+module.exports = {
+  createUser,
+  getUserById
+}
