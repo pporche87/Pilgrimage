@@ -25,10 +25,31 @@ const updateUserProfileById = (id, username, current_city) => {
     .catch(error => error)
 }
 
+const getUserPostsById = (id) => {
+  return db.query('SELECT * FROM posts WHERE user_id=$1',
+    [id])
+    .catch(error => error)
+}
+
+const getPostById = (id) => {
+  return db.query('SELECT * FROM posts WHERE id=$1',
+    [id])
+    .catch(error => error)
+}
+
+const getUserByPostId = (id) => {
+  return db.query('SELECT username FROM users WHERE id = (SELECT user_id FROM posts WHERE id=$1)',
+    [id])
+    .catch(error => error)
+}
+
 
 module.exports = {
   createUser,
   checkUserByEmail,
   getUserById,
-  updateUserProfileById
+  updateUserProfileById,
+  getUserPostsById,
+  getPostById,
+  getUserByPostId
 }

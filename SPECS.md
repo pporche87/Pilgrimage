@@ -81,8 +81,8 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [x] See a link to "Log Out" if they're logged in in the site-wide header.
 - [x] See links to "Log In" and "Sign Up" if they're logged out in the site-wide header.
 - [x] Update their profile by making changes to their name and/or current city.
-- [ ] See the titles of all the posts they've contributed (start with pre-seeded data).
-- [ ] Click on the title of one of their posts and be redirected to a "show" page for that post.
+- [x] See the titles of all the posts they've contributed (start with pre-seeded data).
+- [x] Click on the title of one of their posts and be redirected to a "show" page for that post.
 - [ ] View post "show" pages with title, author, and content.
 - [ ] Refactor sprint 1 and deploy to heroku.
 
@@ -100,15 +100,15 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 **A user should be able to:**
 
 - [ ] Put at least 2 cities data in your database (make sure to include Oakland!)
-- [ ] View the "Oakland" city page (at "/cities/1").
-- [ ] See the site-wide header on the city page.
-- [ ] See the name of the city on the city page.
-- [ ] See an iconic photo of the city on the city page.
-- [ ] View a list of posts on the Oakland page.
-- [ ] See posts on city page sorted by newest first.
+- [ ] View the "Machu Picchu" site page (at "/cities/1").
+- [ ] See the site-wide header on the site page.
+- [ ] See the name of the site on the site page.
+- [ ] See an iconic photo of the site on the site page.
+- [ ] View a list of posts on the Machu Picchu page.
+- [ ] See posts on site page sorted by newest first.
 - [ ] Click on post titles to go to the individual post "show" pages.
 - [ ] Use an "Add New Post" button on the Oakland city page to pull up the new post form.
-- [ ] Create a new post for Oakland
+- [ ] Create a new post for Machu Picchu
 - [ ] Click "Edit" on ANY individual post, and be redirected to the edit form.
 - [ ] Click "delete" on ANY individual post.
 - [ ] See a pop-up that says: "Are you sure you want to delete {{title}}?" when clicking "delete"
@@ -127,18 +127,18 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 
 **A user should be able to:**
 
-- [ ] View city pages for "London" and "Gibraltar".
+- [ ] View city pages for "Machu Picchu" and "Stonehenge".
 - [ ] Verify that a new post they create is successfully published on the correct city page.
 
 A user CANNOT save invalid data to the database, according to the following rules:
 
 - [x] A user CANNOT sign up with an email (or username) that is already in use.
-- [ ] A post's title must be between 1 and 200 characters.
-- [ ] A post's content must not be empty.
+- [x] A post's title must be between 1 and 200 characters.
+- [x] A post's content must not be empty.
 
 A user is authorized to perform certain actions on the site, according to the following rules:
 
-- [ ] A user MUST be logged in to create/update/destroy resources.
+- [x] A user MUST be logged in to create/update/destroy resources.
 - [ ] A user may only edit their own profile and edit/delete their own posts.
 
 ###### Stretch

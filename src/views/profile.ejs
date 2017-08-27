@@ -13,7 +13,11 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-8">
-				<h1>Hello World</h1>
+				<ul>
+					<% posts.forEach(function(post) { %>
+						<li><h1><a href="/post/<%= post.id %>"><%= post.title %></a></h1></li>
+					<% }) %>
+				</ul>
 			</div>
 		</div>
 

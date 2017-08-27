@@ -17,12 +17,26 @@ const getUserById = (id) => {
 }
 
 const updateUserProfileById = (id, username, current_city) => {
-  console.log(username, current_city);
   return DbUsers.updateUserProfileById(id, username, current_city)
+}
+
+const getUserPostsById = (id) => {
+  return DbUsers.getUserPostsById(id)
+}
+
+const getPostById = (id) => {
+  return DbUsers.getPostById(id)
+}
+
+const getUserByPostId = (id) => {
+  return DbUsers.getUserByPostId(id)
 }
 
 module.exports = {
   createUser,
   getUserById,
-  updateUserProfileById
+  updateUserProfileById,
+  getUserPostsById,
+  getPostById,
+  getUserByPostId
 }

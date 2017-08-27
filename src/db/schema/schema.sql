@@ -7,3 +7,23 @@ CREATE TABLE users (
 	img_url VARCHAR(255) DEFAULT 'http://support.plymouth.edu/kb_images/Yammer/default.jpeg',
 	date_joined TIMESTAMP DEFAULT NOW()
 );
+
+CREATE TABLE posts (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(200) NOT NULL,
+	content TEXT NOT NULL,
+	created_at TIMESTAMP DEFAULT NOW(),
+	user_id SERIAL REFERENCES users(id)
+);
+
+CREATE TABLE sacred_sites (
+	id SERIAL PRIMARY KEY,
+	site_name VARCHAR(255) UNIQUE NOT NULL,
+	img_url VARCHAR(255) NOT NULL,
+	post_id SERIAL REFERENCES posts(id)
+);
+
+-- CREATE TABLE user_posts (
+-- 	user_id SERIAL REFERENCES users(id),
+-- 	sacred_site_id SERIAL REFERENCES sacred_sites(id)
+-- );
