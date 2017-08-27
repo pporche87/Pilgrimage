@@ -5,7 +5,8 @@ const path = require('path')
 const routes = require('./server/routes')
 const bodyParser = require('body-parser')
 const passport = require('./config/authentication')
-const session = require('express-session')
+// const session = require('express-session')
+const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 
 app.use(express.static(path.join(__dirname, '../public')))
@@ -26,8 +27,8 @@ app.use((request, response, next) => {
 app.use(session({
 	secret: 'keyboard cat',
 	resave: false,
-	saveUninitialized: false,
-	cookie: { maxAge: 60000 * 30 }
+	saveUninitialized: true,
+	cookie: { secure: true }
 }))
 app.use(passport.initialize())
 app.use(passport.session())
