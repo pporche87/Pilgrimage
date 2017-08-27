@@ -38,11 +38,11 @@ app.use((request, response) => {
 	response.status(404).render('not_found')
 })
 
-const port = process.env.NODE_ENV === 'development' || 'production' ?
-	process.env.DEV_PORT :
-	process.env.TEST_PORT
+// const port = process.env.NODE_ENV === 'development' || 'production' ?
+// 	process.env.DEV_PORT :
+// 	process.env.TEST_PORT
 
-console.log(port);
+const port = 3000
 
 app.listen(port, () => {
 	console.log(`http://localhost:${port}`);
