@@ -2,6 +2,7 @@ const router = require('express').Router()
 // test db connection
 const DbUsers = require('../../models/users')
 const passport = require('../../config/authentication')
+const newUserEmail = require('../../utils/welcome_email')
 
 router.route('/login')
   .get((request, response) => {
@@ -36,10 +37,11 @@ router.route('/signup')
             })
           } else {
             if (user)
-              return response.render('login', {
-                success: true
-              })
-            next()
+              user = user[0]
+            newUserEmail(user.username, user.email)
+            return response.render('login', {
+              success: true
+            })
           }
         })
         .catch(error => error)

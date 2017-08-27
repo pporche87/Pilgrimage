@@ -91,7 +91,7 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 **A user should be able to:**
 
 - [x] See a "default" profile photo on their profile page before adding their own photo.
-- [ ] Update their profile photo (consider using Uploadcare).
+- [x] Update their profile photo (consider using Uploadcare).
 - [ ] See their profile photo next to their posts.
 - [ ] Receive a welcome email after creating an account.
 - [ ] Refactor code
