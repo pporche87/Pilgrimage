@@ -19,9 +19,15 @@ const getUserById = (id) => {
     .catch(error => error)
 }
 
-const updateUserProfileById = (id, username, current_city) => {
-  return db.query('UPDATE users SET username=$2, current_city=$3 WHERE id=$1',
-    [id, username, current_city])
+const updateUserProfileById = (id, username, current_city, img_url) => {
+  return db.query('UPDATE users SET username=$2, current_city=$3 img_url=$4 WHERE id=$1',
+    [id, username, current_city, img_url])
+    .catch(error => error)
+}
+
+const updateUserImageById = (id, imgurl) => {
+  return db.query('UPDATE users SET img_url=$2 WHERE id=$1',
+    [id, imgurl])
     .catch(error => error)
 }
 
@@ -51,5 +57,6 @@ module.exports = {
   updateUserProfileById,
   getUserPostsById,
   getPostById,
-  getUserByPostId
+  getUserByPostId,
+  updateUserImageById
 }

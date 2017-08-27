@@ -5,8 +5,8 @@ const path = require('path')
 const routes = require('./server/routes')
 const bodyParser = require('body-parser')
 const passport = require('./config/authentication')
-// const session = require('express-session')
-const session = require('cookie-session')
+const session = require('express-session')
+// const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 
 app.use(express.static(path.join(__dirname, '../public')))
@@ -27,8 +27,8 @@ app.use((request, response, next) => {
 app.use(session({
 	secret: 'keyboard cat',
 	resave: false,
-	saveUninitialized: true,
-	cookie: { secure: true }
+	saveUninitialized: false,
+	cookie: { maxAge: 60000 * 30 }
 }))
 app.use(passport.initialize())
 app.use(passport.session())
@@ -39,11 +39,11 @@ app.use((request, response) => {
 	response.status(404).render('not_found')
 })
 
-// const port = process.env.NODE_ENV === 'development' || 'production' ?
-// 	process.env.DEV_PORT :
-// 	process.env.TEST_PORT
+const port = process.env.NODE_ENV === 'development' ?
+	process.env.DEV_PORT :
+	process.env.TEST_PORT
 
-const port = 8080
+// const port = 8080
 
 app.listen(port, () => {
 	console.log(`http://localhost:${port}`);
