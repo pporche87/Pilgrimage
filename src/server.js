@@ -42,7 +42,7 @@ app.use((request, response) => {
 // 	process.env.DEV_PORT :
 // 	process.env.TEST_PORT
 
-const port = 3000
+const port = 8080
 
 app.listen(port, () => {
 	console.log(`http://localhost:${port}`);
