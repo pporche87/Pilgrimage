@@ -4,6 +4,12 @@
 		<div class="col-sm-6 col-md-4">
 			<div class="thumbnail">
 				<img src="<%= user.img_url %>" alt="Profile Picture">
+				<form class="" action="/update/image/<%= user.id %>" method="post">
+					<div class="form-group">
+						<input type="hidden" role="uploadcare-uploader" name="imgurl" data-public-key="3ab2a21e3dd8a6a0f126" data-images-only />
+						<input type="submit" value="Save">
+					</div>
+				</form>
 				<div class="caption">
 					<h3><%= user.username %></h3>
 					<p><%= moment(user.date_joined).format('MMMM Do YYYY') %></p>
