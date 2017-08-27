@@ -73,7 +73,7 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [x] Navigate to "/" and see a basic splash page.
 - [x] See the name of the website on the splash page.
 - [x] See links to "Log In" and "Sign Up" on the splash page.
-- [ ] Sign up for an account.
+- [x] Sign up for an account.
 - [ ] Log in to their account if they already have one.
 - [ ] Be redirected to their public profile page after logging in.
 - [ ] On their public profile page, see their name, the current city they have set in their profile, and their join date.
