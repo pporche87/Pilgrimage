@@ -15,7 +15,7 @@ router.route('/login')
       }) }
       request.logIn(user, function(error) {
         if (error) { return next(error) }
-        return response.redirect('/profile')
+        return response.redirect(`/profile/${user.id}`)
       })
     })(request, response, next)
   })
