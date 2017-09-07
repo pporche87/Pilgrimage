@@ -127,8 +127,8 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 
 **A user should be able to:**
 
-- [ ] View city pages for "Machu Picchu" and "Sedona".
-- [ ] Verify that a new post they create is successfully published on the correct city page.
+- [x] View city pages for "Machu Picchu" and "Sedona".
+- [x] Verify that a new post they create is successfully published on the correct city page.
 
 A user CANNOT save invalid data to the database, according to the following rules:
 
