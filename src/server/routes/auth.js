@@ -26,10 +26,13 @@ router.route('/signup')
   })
   .post((request, response, next) => {
     const { username, email, password, confirmPassword } = request.body
+
+		console.log(username, email, password, confirmPassword);
 		
     if (password === confirmPassword) {
       DbUsers.createUser(username,email,password)
         .then((user) => {
+					console.log(user);
           if (user.name === 'error') {
             return response.render('signup', {
               message: 'User is already registerd',

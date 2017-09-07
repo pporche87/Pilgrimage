@@ -7,6 +7,7 @@
     "start": "NODE_ENV=production node src/server.js",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "db:reset": "dropdb pilgrimage && createdb pilgrimage && npm run load_schema",
+		"init:db": "psql -h ec2-54-83-48-188.compute-1.amazonaws.com -U alujaxavxmfuai -d d9to3ntfum1s6n < src/db/schema/schema.sql",
     "test_queries": "psql -d pilgrimage < src/db/schema/test_queries.sql",
     "load_posts": "psql -d pilgrimage < src/db/seed/posts.sql",
 		"load_cities": "psql -d pilgrimage < src/db/seed/cities.sql",
