@@ -101,20 +101,20 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 
 **A user should be able to:**
 
-- [ ] Put at least 2 cities data in your database.
-- [ ] View the "Machu Picchu" site page (at "/cities/1").
-- [ ] See the site-wide header on the site page.
-- [ ] See the name of the site on the site page.
-- [ ] See an iconic photo of the site on the site page.
-- [ ] View a list of posts on the Machu Picchu page.
-- [ ] See posts on site page sorted by newest first.
-- [ ] Click on post titles to go to the individual post "show" pages.
-- [ ] Use an "Add New Post" button on the Oakland city page to pull up the new post form.
-- [ ] Create a new post for Machu Picchu
-- [ ] Click "Edit" on ANY individual post, and be redirected to the edit form.
-- [ ] Click "delete" on ANY individual post.
-- [ ] See a pop-up that says: "Are you sure you want to delete {{title}}?" when clicking "delete"
-- [ ] Have the post deleted when confirming the pop-up.
+- [x] Put at least 2 cities data in your database.
+- [x] View the "Machu Picchu" site page (at "/cities/1").
+- [x] See the site-wide header on the site page.
+- [x] See the name of the site on the site page.
+- [x] See an iconic photo of the site on the site page.
+- [x] View a list of posts on the Machu Picchu page.
+- [x] See posts on site page sorted by newest first.
+- [x] Click on post titles to go to the individual post "show" pages.
+- [x] Use an "Add New Post" button on the Oakland city page to pull up the new post form.
+- [x] Create a new post for Machu Picchu
+- [x] Click "Edit" on ANY individual post, and be redirected to the edit form.
+- [x] Click "delete" on ANY individual post.
+- [x] See a pop-up that says: "Are you sure you want to delete {{title}}?" when clicking "delete"
+- [x] Have the post deleted when confirming the pop-up.
 
 ##### Stretch
 
@@ -129,7 +129,7 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 
 **A user should be able to:**
 
-- [ ] View city pages for "Machu Picchu" and "Stonehenge".
+- [ ] View city pages for "Machu Picchu" and "Sedona".
 - [ ] Verify that a new post they create is successfully published on the correct city page.
 
 A user CANNOT save invalid data to the database, according to the following rules:

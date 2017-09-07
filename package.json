@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node src/server.js",
-    "start:dev": "NODE_ENV=development nodemon src/server.js",
+    "dev": "NODE_ENV=development nodemon src/server.js",
     "db:reset": "dropdb pilgrimage && createdb pilgrimage && npm run load_schema",
-    "test_queries": "psql -d pilgrimage < src/db/test_queries.sql",
+    "test_queries": "psql -d pilgrimage < src/db/schema/test_queries.sql",
     "load_posts": "psql -d pilgrimage < src/db/seed/posts.sql",
+		"load_cities": "psql -d pilgrimage < src/db/seed/cities.sql",
     "load_schema": "psql -d pilgrimage < src/db/schema/schema.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

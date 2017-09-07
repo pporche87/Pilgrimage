@@ -1,0 +1,37 @@
+<%- include partials/header %>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
+<div class="container">
+	<p class="text-right"><a href="/cities/<%= city.id %>/new" class="btn btn-default">New Post</a></p>
+	<hr>
+	<div class="jumbotron">
+		<h1><%= city.site_name %></h1>
+	</div>
+</div>
+<hr>
+<div class="posts container">
+	<% posts.forEach(function(post) { %>
+		<div class="row">
+			<div class="col-md-3">
+				<img src="<%= post.img_url %>" class="img-thumbnail" alt="User Profile">
+			</div>
+			<div class="col-md-9">
+				<h5><a href="/posts/post/<%= post.id %>"><%= post.title %></a></h5>
+				<p><%= post.content %></p>
+				<p><a href="/posts/post/<%= post.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>
+				<span class="glyphicon glyphicon-trash" onClick="confirmDelete(<%= post.id %>)"></span></p>
+			</div>
+		</div>
+		<hr>
+	<% }) %>
+</div>
+
+<script>
+	$('.jumbotron').css('background-image', "url('<%= city.img_url %>')")
+</script>
+
+<%- include partials/footer %>
