@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 // const xoauth2 = require('xoauth2')
-const config = require('./cred')
+// const config = require('./cred')
 
 module.exports = (username, email) => {
   let transporter = nodemailer.createTransport({
@@ -8,8 +8,8 @@ module.exports = (username, email) => {
     secure: false,
     port: 25,
     auth: {
-      user: config.username,
-      pass: config.password
+      user: 'porchedev@gmail.com',
+      pass: 'porcheDev123'
     },
     tls: {
       rejectUnauthorized: false
