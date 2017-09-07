@@ -43,5 +43,5 @@ const port = process.env.NODE_ENV === 'development' | process.env.NODE_ENV === '
   process.env.TEST_PORT
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port}`);
+  console.log(`http://localhost:${port}`)
 })
