@@ -8,3 +8,22 @@
 	-moz-box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
 	box-shadow: -7px 5px 25px -4px rgba(0,0,0,0.54);
 }
+
+.jumbotron {
+  background-color: #17234E;
+  margin-bottom: 0;
+  min-height: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+	color: #fff;
+}
+
+.glyphicon-pencil,
+.glyphicon-trash {
+	font-size: 1.5em;
+	pading-left: 0;
+	padding-right: 15px;
+	margin-top: 10px;
+}
