@@ -84,7 +84,6 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [x] See the titles of all the posts they've contributed (start with pre-seeded data).
 - [x] Click on the title of one of their posts and be redirected to a "show" page for that post.
 - [x] View post "show" pages with title, author, and content.
-- [ ] Deploy to heroku.
 
 ##### Stretch
 
@@ -95,7 +94,6 @@ After each sprint, **deploy to heroku** to get practice getting the app online. 
 - [x] See their profile photo next to their posts.
 - [x] Receive a welcome email after creating an account.
 - [x] Refactor code
-- [ ] Update heroku.
 
 #### Sprint 2: Travel Tip CRUD
 

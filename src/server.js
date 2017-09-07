@@ -38,7 +38,7 @@ app.use((request, response) => {
   response.status(404).render('not_found')
 })
 
-const port = process.env.NODE_ENV === 'development' ?
+const port = process.env.NODE_ENV === 'development' | process.env.NODE_ENV === 'production' ?
   process.env.DEV_PORT :
   process.env.TEST_PORT
 
