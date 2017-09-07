@@ -38,9 +38,22 @@ app.use((request, response) => {
   response.status(404).render('not_found')
 })
 
-const port = process.env.NODE_ENV === 'development' | process.env.NODE_ENV === 'production' ?
-  process.env.DEV_PORT :
-  process.env.TEST_PORT
+const determinePort = (env) => {
+  if (env === 'production') {
+    return process.env.PORT
+  } else if (env === 'development') {
+    return process.env.DEV_PORT
+  } else if (env === 'test') {
+    return process.env.TEST_PORT
+  }
+}
+
+const env = process.env.NODE_ENV
+const port = determinePort(env)
+//
+// process.env.NODE_ENV === 'development' | process.env.NODE_ENV === 'production' ?
+//   process.env.DEV_PORT :
+//   process.env.TEST_PORT
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
